@@ -1,5 +1,4 @@
 # MP4ExporterUE4
-
 MP4 Video exporter pluging for Unreal Movie Render Queue.
 The plugin allows encoding the animation in the RenderQueue into mp4,with optional AAC audio track.
 The plugin can be used in editor as well as in runtime builds.
@@ -8,10 +7,8 @@ Any feedbacks,feature requests,bug reports are much welcommed,but I cannot guran
 
 
 ## Supported platforms
-
-This specific build supports only Windows as some of the source code is precompiled into static library.
-All the source code is provided seprately and completely portable to any platform supported by Unreal Engine.
-
+This specific distribution has been test with UE4 V4.27, Windows. Some of the source code is precompiled into static library.
+ 
 ## Dependencies
 The following libav libraries are linked dynamically with this plugin's source code: avcodec-58.dll,avformat-58.dll,avutil-56.dll,swscale-5.dll,swresample-3.dll
 The encoding/multiplexing logic that uses the above libraries resides in 2 .c files, which are provided separately: ca_videoencoder.h,ca_videoencoder.c
