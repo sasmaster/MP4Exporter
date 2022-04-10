@@ -22,7 +22,7 @@ These two files have been precompiled with MSVC 2019 for 64bit target into stati
 
 1. All the libav shared libs are provided as bin.zip file in 'Plugins\VideoEncoder\Source\ThirdParty\ffmpeg' directory. Unzip it in the same location so that all the files end up in 'bin' folder.
 2. Right click VideoEncoderUE.uproject and press 'Generate Visual Studio project files'. VS 2017,2019 should work fine,but let me know if there is a problem.
-3. Compile the solution and launch the UE4 test project either via VS or via the launcher file.
+3. Compile the solution,make sure the shared libs (DLL files) are put into the same location where your project executable file is, then launch the UE4 test project either via VS or via the launcher file.
 4. From now on I assume you know how to create level sequence and setup the movie render queue. The test project contains a preset for the exporter:
 
 ![MP4 exporter preset](/Docs/p1.JPG)
