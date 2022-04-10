@@ -9,13 +9,13 @@ Any feedbacks,feature requests,bug reports are much welcommed,but I cannot guran
 
 ## Supported platforms
 
-This specific build supports only Windows as some of the source code is precompiled into static library.
+This specific build supports only Windows 64bit as some of the source code is precompiled into static library.
 All the source code is provided seprately and completely portable to any platform supported by Unreal Engine.
 
 ## Dependencies
 The following libav libraries are linked dynamically with this plugin's source code: avcodec-58.dll,avformat-58.dll,avutil-56.dll,swscale-5.dll,swresample-3.dll
-The encoding/multiplexing logic that uses the above libraries resides in 2 .c files, which are provided separately: ca_videoencoder.h,ca_videoencoder.c
-These two files have been precompiled with MSVC 2019 for 64bit target into static librariy which is linked with UE4 plugin of the example project.
+The encoding/multiplexing logic that uses the above libraries resides in 2 .c files, which are provided separately on request (contact me via info at codeartworks dot com): ca_videoencoder.h,ca_videoencoder.c
+These two files have been precompiled with MSVC 2019 for 64bit target into static librariy which is linked with UE4 plugin of the example project. I will upload those later as the code requires a good cleanup.
 
 
 ## Usage
