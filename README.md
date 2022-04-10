@@ -24,8 +24,16 @@ These two files have been precompiled with MSVC 2019 for 64bit target into stati
 2. Right click VideoEncoderUE.uproject and press 'Generate Visual Studio project files'. VS 2017,2019 should work fine,but let me know if there is a problem.
 3. Compile the solution and launch the UE4 test project either via VS or via the launcher file.
 4. From now on I assume you know how to create level sequence and setup the movie render queue. The test project contains a preset for the exporter:
+
 ![MP4 exporter preset](/Docs/p1.JPG)
-6. 
+
+5. The MP4 exporter's interface at this point of time is very simple.It allows the user to provide the bitrate (in bits),which is very important for the video quality. You may check YOUTUBE resolution/bitrate reference table for recommended bitrates. And the optional audio file location is provided,so one can add a soundtrack to the encoded movie queue. The audio file must be provided in AAC format.
+
+![MP4 exporter settings](/Docs/p2.JPG)
+
+6. Once the exporter is set,just press the "Render" button and the video export will begin. The rest of the settings in the Render Queue are as usual.
+
+![MP4 exporter export](/Docs/p3.JPG)
 
 
 ## License
