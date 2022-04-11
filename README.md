@@ -1,6 +1,6 @@
 # MP4ExporterUE4
 
-MP4 Video exporter pluging for Unreal Movie Render Queue.
+MP4 Video exporter plugin for Unreal Movie Render Queue.
 The plugin allows encoding the animation in the RenderQueue into mp4,with optional AAC audio track.
 The plugin can be used in editor as well as in runtime builds.
 The plugin is still pretty raw,I have been developing it as a part of a bigger project I have been working on.
