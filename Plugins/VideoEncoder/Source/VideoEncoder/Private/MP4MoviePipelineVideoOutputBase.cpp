@@ -29,9 +29,6 @@ TUniquePtr<MovieRenderPipeline::IVideoCodecWriter>
 UMP4MoviePipelineVideoOutput::Initialize_GameThread(const FString& InFileName, FIntPoint InResolution,
 	EImagePixelType InPixelType, ERGBFormat InPixelFormat, uint8 InBitDepth, uint8 InNumChannels)
 {
-	//UMoviePipelineVideoOutputBase::Initialize_GameThread(InFileName, InResolution, InPixelType, InPixelFormat, InBitDepth, InNumChannels);
-	//PURE_VIRTUAL(UMoviePipelineVideoOutputBase::Initialize_GameThread, return nullptr; );
-
 
 	const UMoviePipelineOutputSetting* OutputSettings = GetPipeline()->GetPipelineMasterConfig()->FindSetting<UMoviePipelineOutputSetting>();
 	if (!OutputSettings)
@@ -76,7 +73,7 @@ UMP4MoviePipelineVideoOutput::Initialize_GameThread(const FString& InFileName, F
 	VideoEncoderContext* Encoder = VideoEncoderCreate();
 	check(Encoder);
 	TUniquePtr<FFMPEGWriter> OutWriter = MakeUnique<FFMPEGWriter>();
-	OutWriter->Writer = Encoder;// MoveTemp(Encoder);
+	OutWriter->Writer = Encoder; 
 	OutWriter->FileName = InFileName;
 
 	return OutWriter;

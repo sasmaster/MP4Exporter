@@ -17,8 +17,6 @@ The following libav libraries are linked dynamically with this plugin's source c
 The encoding/multiplexing logic that uses the above libraries resides in 2 .c files, which are provided separately: ca_videoencoder.h,ca_videoencoder.c
 These two files have been precompiled with MSVC 2019 for 64bit target into static librariy which is linked with UE4 plugin of the example project.
 
-
-
 ## License
 The plugin contains a code which links with LIBAV project so all the relevant licenses apply herein as well.
 This software uses libraries from the Libav project under the LGPLv2.1 or GPL v2 or later, depending what kind of LIBAV libraries you
@@ -26,7 +24,7 @@ are planning to use in your project. This specific version is linked with LIBAV 
 decide to use this project as is, GPL license is also applicable to thhis project and where it is going to be incorporated.
 Please check [HERE](https://libav.org/legal/) the LIBAV license comppilance terms & conditions before you decide to sell and disitrbute your UE4
 project with this plugin. Also note that UE4 marketplace forbids distribution of plugins with LGPL/GPL licensing types.
-I strongly recomend to consult to consult your lawyers if you mean to sell or distribute your own project along with this code.
+I strongly recommend to consult with a lawyer if you mean to sell or distribute your own project along with this code.
 
 Any Epic Games / UnrealEngine related code is covered under license outlined in EpicGames UE4 EULA.
 

@@ -1,0 +1,1 @@
+ca_videoencoder.c source file is located in VideoEncoder/Private directory so it can be compiled directly into the plugin module

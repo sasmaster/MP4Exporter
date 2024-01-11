@@ -57,19 +57,19 @@ public class VideoEncoder : ModuleRules
 			);
 
 		PrivateIncludePaths.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/ffmpeg/include"));
-		PrivateIncludePaths.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/videoencoder/include"));
+        PrivateIncludePaths.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/videoencoder/include"));
 
-
-		// Add any import libraries or static libraries
-		PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/ffmpeg/lib", "avcodec.lib"));
+        // Add any import libraries or static libraries
+        PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/ffmpeg/lib", "avcodec.lib"));
 		PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/ffmpeg/lib", "avformat.lib"));
 		PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/ffmpeg/lib", "avutil.lib"));
 		PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/ffmpeg/lib", "swscale.lib"));
-		PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/videoencoder/lib/Win32/Release", "LibVideoEncoder1.lib"));
+		//uncomment if prefer to use precompiled lib instead of source
+	//	PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Source/ThirdParty/videoencoder/lib/Win32/Release", "LibVideoEncoder1.lib"));
 
 	 
 
-		//PublicLibraryPaths.Add(Path.Combine(ModuleDirectory, "ThirdParty/ffmpeg/bin"));
+		//preload the DLLs
 		PublicDelayLoadDLLs.Add("avcodec-58.dll");
 		PublicDelayLoadDLLs.Add("avformat-58.dll");
 		PublicDelayLoadDLLs.Add("avutil-56.dll");
@@ -78,8 +78,6 @@ public class VideoEncoder : ModuleRules
 
 		//https://github.com/ue4plugins/VlcMedia/blob/master/Source/VlcMedia/VlcMedia.Build.cs
 
-
-		 
 		string FFMPEGBinDirectory = Path.Combine(PluginDirectory, "Source/ThirdParty/ffmpeg/bin");
 
 		RuntimeDependencies.Add("$(TargetOutputDir)/avcodec-58.dll", Path.Combine(FFMPEGBinDirectory, "avcodec-58.dll"));
@@ -87,9 +85,6 @@ public class VideoEncoder : ModuleRules
 		RuntimeDependencies.Add("$(TargetOutputDir)/avutil-56.dll", Path.Combine(FFMPEGBinDirectory, "avutil-56.dll"));
 		RuntimeDependencies.Add("$(TargetOutputDir)/swscale-5.dll", Path.Combine(FFMPEGBinDirectory, "swscale-5.dll"));
 		RuntimeDependencies.Add("$(TargetOutputDir)/swresample-3.dll", Path.Combine(FFMPEGBinDirectory, "swresample-3.dll"));
-
-		 
-
 
 	}
 }
