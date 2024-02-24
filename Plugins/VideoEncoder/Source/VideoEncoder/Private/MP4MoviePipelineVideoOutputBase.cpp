@@ -42,9 +42,9 @@ UMP4MoviePipelineVideoOutput::Initialize_GameThread(const FString& InFileName, F
 	//of the engine executables which we don't want
 
 	 
-	if (!AudioFilePath.Path.IsEmpty())
+	if (!AudioFilePath.FilePath.IsEmpty())
 	{
-		mFFMPEGOptions.audioFilePath = FPaths::ConvertRelativePathToFull(AudioFilePath.Path);
+		mFFMPEGOptions.audioFilePath = FPaths::ConvertRelativePathToFull(AudioFilePath.FilePath);
 	}
 	mFFMPEGOptions.videoWidth = InResolution.X;
 	mFFMPEGOptions.videoHeight = InResolution.Y;

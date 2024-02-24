@@ -63,7 +63,8 @@ public:
 	//FString AudioFilePath;
 
 	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = Settings)
-		FDirectoryPath AudioFilePath;
+	
+	FFilePath AudioFilePath;
 };
 
  
